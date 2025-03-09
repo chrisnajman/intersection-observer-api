@@ -46,7 +46,6 @@ body {
 }
 
 h1 {
-    font-weight: normal;
     font-size: clamp(1.75rem, 1.4486rem + 1.4019vw, 2.5rem);
     display: flex;
     flex-wrap: wrap;
@@ -62,20 +61,14 @@ h1 {
     }
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    filter: invert(var(--img-invert));
-}
-
-p {
-    max-width: 60ch;
-}
-
 h1,
 p {
     text-wrap: pretty;
+}
+
+h1,
+h2 {
+    font-weight: normal;
 }
 
 h2 {
@@ -86,6 +79,17 @@ h2 {
         display: none;
         margin: 0;
     }
+}
+
+p {
+    max-width: 60ch;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    filter: invert(var(--img-invert));
 }
 
 button,
