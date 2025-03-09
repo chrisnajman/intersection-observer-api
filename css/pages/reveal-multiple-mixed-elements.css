@@ -27,6 +27,8 @@
     & .left-col,
     & .right-col {
         outline: 2px solid var(--body-fg);
+        border-radius: var(--border-radius);
+        overflow: hidden;
     }
 
     & .hidden-left,

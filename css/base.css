@@ -48,7 +48,18 @@ body {
 h1 {
     font-weight: normal;
     font-size: clamp(1.75rem, 1.4486rem + 1.4019vw, 2.5rem);
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+        width: 3.125rem;
+        height: 3.125rem;
+        fill: var(--body-fg);
+    }
 }
 
 img {
@@ -137,6 +148,10 @@ code {
 .footer,
 .element {
     background-color: var(--el-bg);
+}
+
+.element {
+    border-radius: var(--border-radius);
 }
 
 .header {
