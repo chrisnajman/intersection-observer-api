@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" id="mixed">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Observes different types of elements (e.g., sections, headings, columns) and animates them as they scroll into view.">
+    <title>4. Reveal Multiple Mixed Elements | Intersection Observer API</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" type="module"></script>
+</head>
+
+<body class="flow">
+    <div id="loader" class="loader"><span class="visually-hidden">The page is loading...</span></div>
+    <span class="visually-hidden" aria-hidden="true" id="page-loaded"></span>
+    <a href="#main-content" class="element-invisible element-focusable skip-link">Skip to main content</a>
+
+    <div class="theme-toggler">
+        <p class="light">Light<span class="visually-hidden"> theme inactive</span></p><button type="button"
+            aria-pressed="true" aria-label="Toggle theme"><span></span></button>
+        <p class="dark">Dark<span class="visually-hidden"> theme active</span></p>
+    </div>
+
+    <header class="header">
+        <h1>Intersection Observer API</h1>
+        <div id="primary-navigation" class="primary-navigation">
+            <div class="hamburger-button-wrapper">
+                <h2>Menu</h2>
+                <button class="hamburger-button" id="hamburger-button" aria-controls="site-navigation"
+                    aria-expanded="false">
+                    <span id="btn-txt" class="visually-hidden">Expand menu</span>
+                    <svg class="lines" viewBox="0 0 100 100">
+                        <rect class="line top" y="28" x="10" rx="5"></rect>
+                        <rect class="line middle" y="47" x="10" rx="5"></rect>
+                        <rect class="line bottom" y="68" x="10" rx="5"></rect>
+                    </svg>
+                </button>
+            </div>
+            <nav id="site-navigation" class="menu-hidden">
+                <ul>
+                    <li><a href="./">Lazy-load images</a></li>
+                    <li><a href="./reveal-single-element.html">Reveal single element</a></li>
+                    <li><a href="./reveal-multiple-elements.html">Reveal multiple elements</a></li>
+                    <li><a href="./reveal-multiple-mixed-elements.html" aria-current="page">Reveal multiple mixed
+                            elements</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main container mixed" id="main-content">
+
+        <h2>4. Reveal Multiple Mixed Elements</h2>
+        <p class="element">Scroll to see the <b>sections</b> appear as they enter the viewport. The script
+            runs once. </p>
+
+
+        <section class="section-1">
+            <h2>Section #1</h2>
+            <div class="section-inner">
+                <p class="left-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque totam vitae a unde
+                    eum impedit amet
+                    dolore fugit adipisci hic et voluptatum placeat repudiandae voluptates aperiam debitis sequi non
+                    perferendis laboriosam, porro eaque odit. Ad.</p>
+                <div class="right-col">
+                    <img src="https://imageplaceholder.net/300x300/" alt="W:300px, H:300px" width="300" height="300">
+                </div>
+            </div>
+        </section>
+        <section class="section-2">
+            <h2>Section #2</h2>
+            <div class="section-inner">
+                <div class="left-col">
+                    <img src="https://imageplaceholder.net/300x300/" alt="W:300px, H:300px" width="300" height="300">
+                </div>
+                <p class="right-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque totam vitae a unde
+                    eum impedit amet
+                    dolore fugit adipisci hic et voluptatum placeat repudiandae voluptates aperiam debitis sequi non
+                    perferendis laboriosam, porro eaque odit. Ad.</p>
+            </div>
+        </section>
+        <section class="section-3">
+            <h2>Section #3</h2>
+            <div class="section-inner">
+                <p class="left-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque totam vitae a unde
+                    eum impedit amet
+                    dolore fugit adipisci hic et voluptatum placeat repudiandae voluptates aperiam debitis sequi non
+                    perferendis laboriosam, porro eaque odit. Ad.</p>
+                <div class="right-col">
+                    <img src="https://imageplaceholder.net/300x300/" alt="W:300px, H:300px" width="300" height="300">
+                </div>
+            </div>
+        </section>
+        <section class="section-4">
+            <h2>Section #4</h2>
+            <div class="section-inner">
+                <div class="left-col">
+                    <img src="https://imageplaceholder.net/300x300/" alt="W:300px, H:300px" width="300" height="300">
+                </div>
+                <p class="right-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque totam vitae a unde
+                    eum impedit amet
+                    dolore fugit adipisci hic et voluptatum placeat repudiandae voluptates aperiam debitis sequi non
+                    perferendis laboriosam, porro eaque odit. Ad.</p>
+            </div>
+        </section>
+        <section class="section-5">
+            <h2>Section #5</h2>
+            <div class="section-inner">
+                <p class="left-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque totam vitae a unde
+                    eum impedit amet
+                    dolore fugit adipisci hic et voluptatum placeat repudiandae voluptates aperiam debitis sequi non
+                    perferendis laboriosam, porro eaque odit. Ad.</p>
+                <div class="right-col">
+                    <img src="https://imageplaceholder.net/300x300/" alt="W:300px, H:300px" width="300" height="300">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-6">
+            <h2>Section #6</h2>
+            <div class="section-inner">
+                <div class="left-col">
+                    <img src="https://imageplaceholder.net/300x300/" alt="W:300px, H:300px" width="300" height="300">
+                </div>
+                <p class="right-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque totam vitae a unde
+                    eum impedit amet
+                    dolore fugit adipisci hic et voluptatum placeat repudiandae voluptates aperiam debitis sequi non
+                    perferendis laboriosam, porro eaque odit. Ad.</p>
+            </div>
+        </section>
+        <section class="section-7">
+            <h2>Section #7</h2>
+            <div class="section-inner">
+                <p class="left-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque totam vitae a unde
+                    eum impedit amet
+                    dolore fugit adipisci hic et voluptatum placeat repudiandae voluptates aperiam debitis sequi non
+                    perferendis laboriosam, porro eaque odit. Ad.</p>
+                <div class="right-col">
+                    <img src="https://imageplaceholder.net/300x300/" alt="W:300px, H:300px" width="300" height="300">
+                </div>
+            </div>
+        </section>
+        <section class="section-8">
+            <h2>Section #8</h2>
+            <div class="section-inner">
+                <div class="left-col">
+                    <img src="https://imageplaceholder.net/300x300/" alt="W:300px, H:300px" width="300" height="300">
+                </div>
+                <p class="right-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque totam vitae a unde
+                    eum impedit amet
+                    dolore fugit adipisci hic et voluptatum placeat repudiandae voluptates aperiam debitis sequi non
+                    perferendis laboriosam, porro eaque odit. Ad.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <a href="https://github.com/chrisnajman/intersection-observer-api" target="_blank" rel="noopener noreferrer"
+            class="external-link">
+            GitHub Repository
+        </a>
+    </footer>
+
+</body>
+
+</html>

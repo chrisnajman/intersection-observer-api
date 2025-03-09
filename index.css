@@ -1,0 +1,7 @@
+@import "./css/base.css";
+@import "./css/components/loader.css";
+@import "./css/components/navigation.css";
+@import "./css/pages/lazy-load.css";
+@import "./css/pages/reveal-single-element.css";
+@import "./css/pages/reveal-multiple-elements.css";
+@import "./css/pages/reveal-multiple-mixed-elements.css";

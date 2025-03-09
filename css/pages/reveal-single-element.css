@@ -1,0 +1,11 @@
+.single section {
+    opacity: 0;
+    transition: opacity 1s ease;
+    width: fit-content;
+    padding: 2rem;
+    margin-inline: auto;
+
+    &.loaded {
+        opacity: 1;
+    }
+}

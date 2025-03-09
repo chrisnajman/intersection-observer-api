@@ -1,0 +1,52 @@
+.mixed section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: fit-content;
+    padding: 2rem;
+    margin-inline: auto;
+    overflow: hidden;
+    transition: all 1.5s ease-in-out;
+
+    & .section-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    & p {
+        background-color: var(el-fg);
+        color: var(--body-fg);
+    }
+
+    & h2 {
+        line-height: 1;
+    }
+
+    & .left-col,
+    & .right-col {
+        outline: 2px solid var(--body-fg);
+    }
+
+    & .hidden-left,
+    & .hidden-right {
+        opacity: 0;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        & .hidden-left {
+            transform: translateX(-100%);
+        }
+
+        & .hidden-right {
+            transform: translateX(100%);
+        }
+
+        & h2,
+        & .left-col,
+        & .right-col {
+            transition: all 1.5s ease-in-out;
+        }
+    }
+}

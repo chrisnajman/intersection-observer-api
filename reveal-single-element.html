@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" id="single">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Observes a single element and applies a visual effect when it enters the viewport.">
+    <title>2. Reveal Single Element | Intersection Observer API</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" type="module"></script>
+</head>
+
+<body class="flow">
+    <div id="loader" class="loader"><span class="visually-hidden">The page is loading...</span></div>
+    <span class="visually-hidden" aria-hidden="true" id="page-loaded"></span>
+    <a href="#main-content" class="element-invisible element-focusable skip-link">Skip to main content</a>
+
+    <div class="theme-toggler">
+        <p class="light">Light<span class="visually-hidden"> theme inactive</span></p><button type="button"
+            aria-pressed="true" aria-label="Toggle theme"><span></span></button>
+        <p class="dark">Dark<span class="visually-hidden"> theme active</span></p>
+    </div>
+
+    <header class="header">
+        <h1>Intersection Observer API</h1>
+        <div id="primary-navigation" class="primary-navigation">
+            <div class="hamburger-button-wrapper">
+                <h2>Menu</h2>
+                <button class="hamburger-button" id="hamburger-button" aria-controls="site-navigation"
+                    aria-expanded="false">
+                    <span id="btn-txt" class="visually-hidden">Expand menu</span>
+                    <svg class="lines" viewBox="0 0 100 100">
+                        <rect class="line top" y="28" x="10" rx="5"></rect>
+                        <rect class="line middle" y="47" x="10" rx="5"></rect>
+                        <rect class="line bottom" y="68" x="10" rx="5"></rect>
+                    </svg>
+                </button>
+            </div>
+            <nav id="site-navigation" class="menu-hidden">
+                <ul>
+                    <li><a href="./">Lazy-load images</a></li>
+                    <li><a href="./reveal-single-element.html" aria-current="page">Reveal single element</a></li>
+                    <li><a href="./reveal-multiple-elements.html">Reveal multiple elements</a></li>
+                    <li><a href="./reveal-multiple-mixed-elements.html">Reveal multiple mixed elements</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main container single" id="main-content">
+
+        <h2>2. Reveal Single Element</h2>
+        <p class="element">Scroll to the bottom to see the <b>section</b> appear as it enters the viewport. The script
+            runs once. </p>
+
+        <p>Voluptatum eaque deserunt dolorem, repudiandae ut maiores autem ratione sequi enim nihil quae
+            neque, facere quibusdam perspiciatis nulla officia aut ex at eligendi incidunt aperiam maxime, magnam
+            dolorum impedit. Omnis assumenda esse unde libero mollitia veniam in dolorum nihil, ipsam officia cum, quam
+            adipisci voluptatibus sunt consequatur earum quisquam vel.</p>
+        <p>Fugit, repellendus similique? Vitae similique sed itaque autem fugit quibusdam hic quia, earum
+            atque delectus cupiditate perspiciatis perferendis sit! Facere minima accusantium, asperiores ipsum at sit
+            labore eos maiores voluptatum deleniti fuga ea repellendus nostrum veritatis quibusdam ipsa mollitia quo
+            perspiciatis autem dolorum, pariatur praesentium a tenetur. Labore, deleniti accusamus.</p>
+        <p>Non est adipisci, nulla possimus dolore ab cupiditate voluptate neque at, expedita amet nemo?
+            Modi excepturi eum, in perferendis tempora ratione delectus ab earum, minus debitis sunt atque. In quisquam
+            tenetur possimus et, eum nemo repellat quasi facilis soluta quis incidunt non nobis rem. Eaque impedit
+            laboriosam asperiores adipisci veritatis.</p>
+        <p>Aliquam fuga, modi, cum, commodi reiciendis libero dignissimos assumenda soluta sit maiores
+            eligendi eveniet nulla eaque sed. Officiis doloribus veritatis cumque nobis voluptatibus fugiat cum libero
+            corrupti voluptates saepe perspiciatis minima est possimus dignissimos consectetur error amet voluptas
+            expedita beatae aut impedit fugit, non nisi. Et rem fugit quae tempore?</p>
+        <p>Voluptates provident dolor numquam iusto magni praesentium vel error pariatur omnis deleniti ad
+            ipsum unde, eum, enim aliquid. Odit soluta amet voluptates cumque, tempore iure harum optio ullam dolorem
+            voluptas culpa, veritatis quisquam vitae fuga iste natus voluptate. Earum officiis inventore molestias
+            aliquid deserunt a totam, quos possimus placeat quisquam.</p>
+        <p>Dolor porro, repellendus harum cum ducimus laudantium voluptatibus eos rerum iure doloribus!
+            Explicabo perspiciatis sunt nostrum animi iure fugit molestiae libero delectus, sed pariatur deserunt a
+            voluptatum, iusto modi fugiat repellendus reiciendis sit quae est! Tempora hic nemo harum laborum voluptatum
+            optio dolorem eligendi tenetur ratione ipsam, corporis commodi voluptates.</p>
+        <p>Facilis alias, blanditiis ipsum amet adipisci, doloribus labore, veritatis voluptatem similique
+            temporibus perferendis a magni ea quae! Sapiente, perferendis maxime autem nihil aut voluptates consequuntur
+            in sint. Ea magnam neque quia error assumenda voluptatem aperiam. Iusto neque libero id deserunt veritatis
+            soluta molestiae at, aut unde, beatae sed nulla corrupti.</p>
+        <p>Recusandae harum vel quaerat repellat ad minus perferendis laboriosam rem, et consequatur
+            fugiat officiis necessitatibus veniam quia? Corporis quasi odio aperiam provident animi natus tenetur eos
+            dolore, in rerum velit ab ratione ipsa quam, omnis repellat dolorem obcaecati. Officiis aliquam impedit
+            nesciunt nihil adipisci excepturi deleniti soluta eligendi natus repellendus.</p>
+        <p>Harum, vero voluptatum illum deserunt repellat culpa sapiente molestiae corporis soluta non
+            delectus architecto veniam sit blanditiis ut eveniet quisquam repudiandae tempora temporibus facere amet,
+            tempore quos, ratione voluptate! Veniam eos consectetur tempore vero molestias suscipit nam numquam hic,
+            vitae nostrum similique eum enim dolorem exercitationem, vel nesciunt saepe doloremque!</p>
+
+
+        <section class="element">
+            <h2>Section</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam rerum sed veritatis.
+                Necessitatibus nostrum consectetur nobis nisi odit vel porro corrupti dignissimos quisquam debitis.
+                Numquam similique consequuntur voluptatem unde cum tenetur ex sunt a itaque, molestias laboriosam
+                consectetur, quas praesentium distinctio. Laborum quos consequatur laboriosam, magni quasi magnam
+                labore.</p>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <a href="https://github.com/chrisnajman/intersection-observer-api" target="_blank" rel="noopener noreferrer"
+            class="external-link">
+            GitHub Repository
+        </a>
+    </footer>
+
+</body>
+
+</html>

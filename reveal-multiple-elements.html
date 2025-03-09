@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" id="multiple">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Observes multiple sections and triggers animations as they become visible.">
+    <title>3. Reveal Multiple Elements | Intersection Observer API</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" type="module"></script>
+</head>
+
+<body class="flow">
+    <div id="loader" class="loader"><span class="visually-hidden">The page is loading...</span></div>
+    <span class="visually-hidden" aria-hidden="true" id="page-loaded"></span>
+    <a href="#main-content" class="element-invisible element-focusable skip-link">Skip to main content</a>
+
+    <div class="theme-toggler">
+        <p class="light">Light<span class="visually-hidden"> theme inactive</span></p><button type="button"
+            aria-pressed="true" aria-label="Toggle theme"><span></span></button>
+        <p class="dark">Dark<span class="visually-hidden"> theme active</span></p>
+    </div>
+
+    <header class="header">
+        <h1>Intersection Observer API</h1>
+        <div id="primary-navigation" class="primary-navigation">
+            <div class="hamburger-button-wrapper">
+                <h2>Menu</h2>
+                <button class="hamburger-button" id="hamburger-button" aria-controls="site-navigation"
+                    aria-expanded="false">
+                    <span id="btn-txt" class="visually-hidden">Expand menu</span>
+                    <svg class="lines" viewBox="0 0 100 100">
+                        <rect class="line top" y="28" x="10" rx="5"></rect>
+                        <rect class="line middle" y="47" x="10" rx="5"></rect>
+                        <rect class="line bottom" y="68" x="10" rx="5"></rect>
+                    </svg>
+                </button>
+            </div>
+            <nav id="site-navigation" class="menu-hidden">
+                <ul>
+                    <li><a href="./">Lazy-load images</a></li>
+                    <li><a href="./reveal-single-element.html">Reveal single element</a></li>
+                    <li><a href="./reveal-multiple-elements.html" aria-current="page">Reveal multiple elements</a></li>
+                    <li><a href="./reveal-multiple-mixed-elements.html">Reveal multiple mixed elements</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main container multiple" id="main-content">
+
+        <h2>3. Reveal Multiple Elements</h2>
+        <p class="element">Scroll to see the <b>sections</b> appear as they enter the viewport. The script
+            runs once. </p>
+
+
+        <section class="element">
+            <h2>Section #1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam rerum sed veritatis.
+                Necessitatibus nostrum consectetur nobis nisi odit vel porro corrupti dignissimos quisquam debitis.
+                Numquam similique consequuntur voluptatem unde cum tenetur ex sunt a itaque, molestias laboriosam
+                consectetur, quas praesentium distinctio. Laborum quos consequatur laboriosam, magni quasi magnam
+                labore.</p>
+        </section>
+        <section class="element">
+            <h2>Section #2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam rerum sed veritatis.
+                Necessitatibus nostrum consectetur nobis nisi odit vel porro corrupti dignissimos quisquam debitis.
+                Numquam similique consequuntur voluptatem unde cum tenetur ex sunt a itaque, molestias laboriosam
+                consectetur, quas praesentium distinctio. Laborum quos consequatur laboriosam, magni quasi magnam
+                labore.</p>
+        </section>
+        <section class="element">
+            <h2>Section #3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam rerum sed veritatis.
+                Necessitatibus nostrum consectetur nobis nisi odit vel porro corrupti dignissimos quisquam debitis.
+                Numquam similique consequuntur voluptatem unde cum tenetur ex sunt a itaque, molestias laboriosam
+                consectetur, quas praesentium distinctio. Laborum quos consequatur laboriosam, magni quasi magnam
+                labore.</p>
+        </section>
+        <section class="element">
+            <h2>Section #4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam rerum sed veritatis.
+                Necessitatibus nostrum consectetur nobis nisi odit vel porro corrupti dignissimos quisquam debitis.
+                Numquam similique consequuntur voluptatem unde cum tenetur ex sunt a itaque, molestias laboriosam
+                consectetur, quas praesentium distinctio. Laborum quos consequatur laboriosam, magni quasi magnam
+                labore.</p>
+        </section>
+        <section class="element">
+            <h2>Section #5</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam rerum sed veritatis.
+                Necessitatibus nostrum consectetur nobis nisi odit vel porro corrupti dignissimos quisquam debitis.
+                Numquam similique consequuntur voluptatem unde cum tenetur ex sunt a itaque, molestias laboriosam
+                consectetur, quas praesentium distinctio. Laborum quos consequatur laboriosam, magni quasi magnam
+                labore.</p>
+        </section>
+
+        <section class="element">
+            <h2>Section #6</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam rerum sed veritatis.
+                Necessitatibus nostrum consectetur nobis nisi odit vel porro corrupti dignissimos quisquam debitis.
+                Numquam similique consequuntur voluptatem unde cum tenetur ex sunt a itaque, molestias laboriosam
+                consectetur, quas praesentium distinctio. Laborum quos consequatur laboriosam, magni quasi magnam
+                labore.</p>
+        </section>
+        <section class="element">
+            <h2>Section #7</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam rerum sed veritatis.
+                Necessitatibus nostrum consectetur nobis nisi odit vel porro corrupti dignissimos quisquam debitis.
+                Numquam similique consequuntur voluptatem unde cum tenetur ex sunt a itaque, molestias laboriosam
+                consectetur, quas praesentium distinctio. Laborum quos consequatur laboriosam, magni quasi magnam
+                labore.</p>
+        </section>
+        <section class="element">
+            <h2>Section #8</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam rerum sed veritatis.
+                Necessitatibus nostrum consectetur nobis nisi odit vel porro corrupti dignissimos quisquam debitis.
+                Numquam similique consequuntur voluptatem unde cum tenetur ex sunt a itaque, molestias laboriosam
+                consectetur, quas praesentium distinctio. Laborum quos consequatur laboriosam, magni quasi magnam
+                labore.</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <a href="https://github.com/chrisnajman/intersection-observer-api" target="_blank" rel="noopener noreferrer"
+            class="external-link">
+            GitHub Repository
+        </a>
+    </footer>
+
+</body>
+
+</html>

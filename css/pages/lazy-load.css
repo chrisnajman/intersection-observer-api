@@ -1,0 +1,18 @@
+.lazy-load-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.lazy-load {
+    opacity: 0;
+    width: 12.5rem;
+    height: 18.75rem;
+    transition: opacity 0.5s ease;
+
+    &.loaded {
+        opacity: 1;
+        height: auto;
+    }
+}

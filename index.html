@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" id="lazy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Implements lazy loading for images to improve performance by only loading them when they enter the viewport.">
+    <title>1. Lazy Load images | Intersection Observer API</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="./index.css">
+
+    <script src="./index.js" type="module"></script>
+</head>
+
+<body class="lazy flow">
+    <div id="loader" class="loader"><span class="visually-hidden">The page is loading...</span></div>
+    <span class="visually-hidden" aria-hidden="true" id="page-loaded"></span>
+    <a href="#main-content" class="element-invisible element-focusable skip-link">Skip to main content</a>
+
+    <div class="theme-toggler">
+        <p class="light">Light<span class="visually-hidden"> theme inactive</span></p><button type="button"
+            aria-pressed="true" aria-label="Toggle theme"><span></span></button>
+        <p class="dark">Dark<span class="visually-hidden"> theme active</span></p>
+    </div>
+
+    <header class="header">
+        <h1>Intersection Observer API</h1>
+        <div id="primary-navigation" class="primary-navigation">
+            <div class="hamburger-button-wrapper">
+                <h2>Menu</h2>
+                <button class="hamburger-button" id="hamburger-button" aria-controls="site-navigation"
+                    aria-expanded="false">
+                    <span id="btn-txt" class="visually-hidden">Expand menu</span>
+                    <svg class="lines" viewBox="0 0 100 100">
+                        <rect class="line top" y="28" x="10" rx="5"></rect>
+                        <rect class="line middle" y="47" x="10" rx="5"></rect>
+                        <rect class="line bottom" y="68" x="10" rx="5"></rect>
+                    </svg>
+                </button>
+            </div>
+            <nav id="site-navigation" class="menu-hidden">
+                <ul>
+                    <li><a href="./" aria-current="page">Lazy-load images</a></li>
+                    <li><a href="./reveal-single-element.html">Reveal single element</a></li>
+                    <li><a href="./reveal-multiple-elements.html">Reveal multiple elements</a></li>
+                    <li><a href="./reveal-multiple-mixed-elements.html">Reveal multiple mixed elements</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main container" id="main-content">
+
+        <h2>1. Lazy Load Images</h2>
+        <p class="element intro">Scroll to see images loading as they enter the viewport. The script runs once. </p>
+        <div id="images" class="container lazy-load-images"></div>
+
+    </main>
+
+    <footer class="footer">
+        <a href="https://github.com/chrisnajman/intersection-observer-api" target="_blank" rel="noopener noreferrer"
+            class="external-link">
+            GitHub Repository
+        </a>
+    </footer>
+
+</body>
+
+</html>
