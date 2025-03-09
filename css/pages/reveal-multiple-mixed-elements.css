@@ -26,7 +26,7 @@
 
     & .left-col,
     & .right-col {
-        outline: 2px solid var(--body-fg);
+        outline: 0.125rem solid var(--body-fg);
         border-radius: var(--border-radius);
         overflow: hidden;
     }

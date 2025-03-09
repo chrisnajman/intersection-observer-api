@@ -179,6 +179,7 @@ code {
 
     & a {
         color: var(--link-blue);
+        text-underline-offset: 0.5em;
         &::after {
             content: " \27F6";
         }
