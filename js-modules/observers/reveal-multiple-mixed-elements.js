@@ -21,7 +21,7 @@ export default function revealMultipleMixedElements() {
   })
 
   // Select all elements that need to be animated (headings and columns)
-  const headings = document.querySelectorAll("section h2")
+  const headings = document.querySelectorAll("section h3")
   const leftCols = document.querySelectorAll(".left-col")
   const rightCols = document.querySelectorAll(".right-col")
 

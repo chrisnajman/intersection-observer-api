@@ -67,18 +67,15 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-weight: normal;
 }
 
-h2 {
+h2,
+h3 {
     font-size: clamp(1.25rem, 1.1495rem + 0.4673vw, 1.5rem);
     text-align: center;
-
-    &:empty {
-        display: none;
-        margin: 0;
-    }
 }
 
 p {
